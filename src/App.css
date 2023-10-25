@@ -1,38 +1,390 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+:root {
+  --blue: #61dafb;
+  --d-blue: #20232a;
+  --vd-blue: #131314;
+}
+a{color: inherit;text-decoration: none;}
+a:hover{color: inherit;text-decoration: none;}
+ul{padding: 0;margin: 0;}
+li{list-style: none;}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  height: 100px;
+  background-color: #0b0b24;
+  border-bottom: 2px solid var(--blue);
+}
+.logo{}
+.--btn{
+  border: 2px solid var(--blue);
+  border-radius: 35px;
+  background: none;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.--btn2{
+  border: 2px solid var(--blue);
+  border-radius: 35px;
+  background: none;
+  color: #fff;
+  width: 350px;
+  height: 50px;
+  font-weight: 700;
+  cursor: pointer;
+ 
+}
+.page{width: 100%;height: calc(100vh - 100px);display: flex;}
+.left-nav{
+  background-color: var(--vd-blue);
+  width: 20%;
+  height: 100%;
+}
+.left-nav ul li{
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
   text-align: center;
+  width: 100%;
+  padding: 5% 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-page{
+  width: 100%;
+  background-color: #0b0b24;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+.campaign{height: 100%;width: 100%;}
+.campaign form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+.campaign input{
+  border: 2px solid var(--blue);
+  color: #fff;
+  padding: 5px 25px;
+  border-radius: 35px;
+  height: 40px;
+  background: none;
+  width: 300px;
+  color-scheme: dark;
+}
+.campaign input::placeholder{color: #fff;}
+.campaign input:active , .campaign input:focus{
+  border: 2px solid var(--blue);
+  outline: none;
+}
+.header {
+  background-color: #000cee;
 }
 
-.App-link {
-  color: #61dafb;
+.text-color {
+  color: #a2b4d2;
+}
+.nav-color {
+  color: #5f6484;
+}
+.bg-color,
+body {
+  background-color: #0b0c23;
+}
+.orange-bg {
+  background-color: #ff9900;
+}
+.font-weight-600 {
+  font-weight: 600;
+}
+.connect-btn {
+  border-radius: 14px;
+  font-size: 20px;
+  border: 2px solid #a2b4d2;
+}
+.connect-btn:focus {
+  background: none !important;
+  box-shadow: none !important;
+  color: #a2b4d2 !important;
+}
+.connect-btn:hover {
+  background: #ff9900 !important;
+  box-shadow: none !important;
+  color: white !important;
+}
+.border-box {
+  border: 2px solid #a2b4d2;
+  border-radius: 12px;
+}
+.bg-input::placeholder {
+  color: #a2b4d2;
+}
+.bg-input {
+  border: 1px solid #a2b4d2;
+  border-radius: 10px;
+  width: 50% !important;
+  color: #a2b4d2 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* modal */
+
+#modal_box {
+  border: 1px solid #ff9900 !important;
+  background-color: #111336 !important;
+  color: white !important;
+  border-radius: 12px !important;
+}
+.react-responsive-modal-modal {
+  padding: 0px !important;
+  margin: 0px !important;
+  border-radius: 12px !important;
+  width: 30% !important;
+}
+.react-responsive-modal-modal .react-responsive-modal-closeButton {
+  border: 1px solid #ff9900 !important;
+  margin-top: 4px !important;
+  margin-right: 12px !important;
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .react-responsive-modal-modal {
+    width: 70% !important;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 767px) {
+  .react-responsive-modal-modal {
+    width: 90% !important;
   }
+}
+
+#wallet_heading {
+  padding-bottom: 15px !important;
+  padding-left: 30px !important;
+}
+#border-bottom {
+  border-bottom: 2px solid #ff9900 !important;
+}
+
+#wallet-contents {
+  background-color: #ff9900 !important;
+  border-radius: 10px !important;
+  margin-top: 10px !important;
+}
+#wallet_names {
+  padding-top: 12px !important;
+}
+#question_mark {
+  border: 1px solid white;
+  border-radius: 50%;
+}
+#learn_to_connect {
+  text-decoration: none;
+}
+
+/* dropdown */
+
+.dropdown-duration > div > button,
+.dropdown-duration > div > button:hover,
+.dropdown-duration > div > button:active {
+  background: transparent !important;
+  width: 100%;
+  text-align: left;
+  border: 2px solid #a2b4d2;
+  border-radius: 12px;
+  margin: 30px 0px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #a2b4d2;
+}
+.dropdown-duration > div > button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.dropdown-duration > div > div {
+  border: none;
+  box-shadow: inset 0 0 5px grey;
+  -moz-box-shadow: inset 0 0 5px grey;
+  -webkit-box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  background-color: #111336 !important;
+  width: 100%;
+  text-align: center;
+}
+.dropdown-item {
+  color: #a2b4d2;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+}
+.dropdown-item:active,
+.dropdown-item:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff9900 !important;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.stake-btn {
+  border-radius: 12px;
+  font-size: 24px;
+  background: #ff9900;
+}
+.stake-btn:hover,
+.stake-btn:focus {
+  background: #ff9900 !important;
+}
+.tier-btn {
+  border-radius: 12px;
+  background: #ff9900;
+}
+.tier-btn:hover,
+.tier-btn:focus {
+  background: #ff9900 !important;
+}
+.relative-position{
+  position: relative;
+}
+.bg-coin-img {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  opacity: 0.12;
+}
+
+.footer-hr {
+  border-bottom: 2px solid #a2b4d2;
+}
+.footer-icons {
+  font-size: 22px;
+  cursor: pointer;
+}
+.footer-icons:hover {
+  color: #ff9900;
+}
+
+.tier-font {
+  font-size: 15px;
+}
+.pointer{
+  cursor: pointer;
+}
+.terms-condition{
+  color: #17a2b8;
+}
+.font-22{
+  font-size: 22px;
+}
+.terms-condition:hover{
+  text-decoration: underline;
+}
+.disclaimer-box  > div{
+  border-radius: 12px;
+  background-color: #111336;
+}
+@media (max-width: 992px) {
+  .tier-font {
+    font-size: 14px;
+  }
+  .bg-coin-img {
+    top: 55%;
+    width: 60%;
+  }
+}
+@media (min-width:1500px){
+  .bg-coin-img {
+    top: 60%;
+  }
+}
+@media (max-width: 578px) {
+  .header > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tier-font {
+    font-size: 13px;
+  }
+  .bg-coin-img {
+    top: 50%;
+    width: 80%;
+  }
+}
+@media (max-width: 350px) {
+  .tier-font {
+    font-size: 11px;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    padding: 0 2%;
+    height: 60px; /* Adjust the height as needed */
+  }
+  .logo {
+    width: 100%; /* Adjust the size of the logo */
+  }
+  .--btn {
+    width: 150px; /* Adjust the button width */
+    font-size: 16px; /* Adjust the font size */
+  }
+  .--btn2 {
+    width: 100%; /* Full width for smaller screens */
+    font-size: 16px; /* Adjust the font size */
+  }
+}/* Remove border-bottom for small screens */
+@media (max-width: 767px) {
+  header {
+    border-bottom: none;
+  }
+}
+
+
+/* Add these styles to your CSS file */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #61dafb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #61dafb;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
