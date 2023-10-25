@@ -1,5 +1,4 @@
 import nft from '../../images/nft.jpg'
-import Staking from "../Staking/staking";
 import React from "react";
 export interface istake {
 

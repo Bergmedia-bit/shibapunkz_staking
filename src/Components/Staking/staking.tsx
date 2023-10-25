@@ -1,17 +1,10 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import detectEthereumProvider from '@metamask/detect-provider';
-
-import Nftcard1 from '../NftCards/nftcard1';
-import { Nftcard2 } from '../NftCards/nftcard2';
+import React, { useState, useEffect } from 'react';
 import './staking.css';
 import nftstaking from '../../Abi/nftstaking.json';
 import IERC20 from '../../Abi/IERC20.json';
 import punks from '../../Abi/punk.json';
 import { AbiItem } from 'web3-utils';
-import { Audio } from 'react-loader-spinner';
-
 import Web3 from 'web3';
-import nft from '../../images/nft.jpg';
 
 function Staking() {
     const { ethereum } = (window as any);

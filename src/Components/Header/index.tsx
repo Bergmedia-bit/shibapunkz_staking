@@ -11,49 +11,6 @@ function Header() {
   const { ethereum } = window as any;
   const provider = new ethers.providers.Web3Provider((window as any).ethereum);
 
-  // useEffect(() => {
-  //   const initializeMetamask = async () => {
-  //     const web3 = new Web3(Web3.givenProvider);
-    
-  //         // User is logged in to MetaMask, and window.ethereum.selectedAddress contains their Ethereum address
-  //         const userAddress = ethereum.selectedAddress;
-       
-  //        const accounts = await  web3.eth.getAccounts((error:any, accounts:any) => {
-  //         if (!error && accounts.length > 0) {
-  //           const userAddress = accounts[0];
-  //           console.log(`User's Ethereum address: ${userAddress}`);
-  //           if (accounts.length > 0) {
-  //             // User has authorized access to their accounts
-  //             const address = accounts[0];
-              
-  //               // Wallet is connected
-  //               let balance = await provider.getBalance(accounts[0]);
-  //               let bal = ethers.utils.formatEther(balance);
-  //               setAccountAddress(accounts[0]);
-  //               setAccountBalance(bal);
-  //               setIsConnected(true);
-           
-             
-            
-  //             // You can do further actions here, like fetching the account's balance or other data.
-  //           }
-               
-  //             else {
-  //               // User is not logged in to MetaMask
-  //               console.log('User is not logged in to MetaMask');
-  //             }
-  //         } else {
-  //           console.error('Error getting user address:', error);
-  //         }
-  //       });
-     
-  //       initializeMetamask();
-  //     // Your additional logic for both scenarios
-  //     // get_campign();
-
-
-  //   checkMetamaskAvailability();
-  // }, []);
   useEffect(() => {
     const initializeMetamask = async () => {
       const web3 = new Web3(Web3.givenProvider);
@@ -89,29 +46,8 @@ function Header() {
       sethaveMetamask(false);
     }
     sethaveMetamask(true);
-
-    
-    
-    
   };
-  // const connectWallet = async () => {
-  //   try {
-  //     if (!ethereum) {
-  //       sethaveMetamask(false);
-  //     }
-  //     const accounts = await ethereum.request({
-  //       method: 'eth_requestAccounts',
-  //     });
-  //     let balance = await provider.getBalance(accounts[0]);
-  //     let bal = ethers.utils.formatEther(balance);
-  //     setAccountAddress(accounts[0]);
-  //     setAccountBalance(bal);
-  //     setIsConnected(true);
-      
-  //   } catch (error) {
-  //     setIsConnected(false);
-  //   }
-  // };
+
   const connectWallet = async () => {
     try {
       if (!ethereum) {
