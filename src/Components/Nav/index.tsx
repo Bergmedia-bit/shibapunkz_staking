@@ -1,4 +1,6 @@
+import logo from '../../logo.svg';
 import { NavLink } from "react-router-dom";
+
 
 export function Nav() {
   return (
@@ -7,7 +9,6 @@ export function Nav() {
         <ul>
           <li><NavLink to="/">
             Home
-
           </NavLink></li>
           <li><NavLink to="/campaign">
           Launch Campaign
