@@ -7,6 +7,7 @@ export function Nav() {
         <ul>
           <li><NavLink to="/">
             Home
+
           </NavLink></li>
           <li><NavLink to="/campaign">
           Launch Campaign
